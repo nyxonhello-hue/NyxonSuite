@@ -1,0 +1,31 @@
+  public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int money = 50000;
+        System.out.println("1.Create a user Account \n"+"2.Deposit money\n"+
+                "3.Withdraw money\n"+"4.Show balance");
+        int choice = input.nextInt();
+        
+        if (choice == 1) {
+            System.out.println("Enter username: ");
+            String name = input.nextLine();
+            System.out.println("Enter you pin: ");
+            int pin = input.nextInt();
+             System.out.println("Confirm pin: ");
+            int co_pin = input.nextInt();
+        } else if (choice==2) {
+            System.out.println("Enter the amount to deposit");
+            float depo = input.nextFloat();
+            System.out.println("Your current Balance is: "+(depo + money));
+        }else if (choice==3) {
+            System.out.println("Enter the amount to withdraw");
+            float draw = input.nextFloat();
+            System.out.println("Your current Balance is: "+(money - draw));
+        }else if (choice==4) {
+        
+          System.out.println("Your current Balance is: "+money );
+        }
+
+        
+    }
+}

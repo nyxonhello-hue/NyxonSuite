@@ -1,0 +1,1 @@
+# TODO for fixing error in project_2.py\n\n1. [ ] Create TODO.md (current)\n2. [ ] Edit project_2.py to fix os.rename path error and improvements\n3. [ ] Test by running `python project_2.py`\n4. [ ] Update TODO with completion\n5. [ ] Attempt task completion
