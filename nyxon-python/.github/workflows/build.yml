@@ -1,0 +1,30 @@
+name: Build Windows EXE
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install customtkinter psutil requests beautifulsoup4 pyinstaller
+
+      - name: Build EXE
+        run: pyinstaller --onedir --windowed --name="NyxonSuite" main.py
+        working-directory: nyxon-python
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: NyxonSuite-Windows
+          path: nyxon-python/dist/NyxonSuite/
