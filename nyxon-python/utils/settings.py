@@ -15,7 +15,8 @@ CONFIG_FILE = CONFIG_DIR / "config.json"
 DEFAULTS: dict = {
     "theme": "dark",
     "accent_color": "#7B5CF0",
-    "file_organizer": {
+    "bg_dark": True,
+        "file_organizer": {
         "target_folder": str(Path.home() / "Downloads"),
         "organize_by": "extension",
     },

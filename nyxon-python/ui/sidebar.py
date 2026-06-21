@@ -4,8 +4,12 @@ Categorised navigation with collapsible sections and scrollable automation list.
 To add a new automation: add it to AUTOMATION_REGISTRY with its category.
 """
 
+import platform
 import customtkinter as ctk
 from typing import Callable
+
+_EMOJI = "Segoe UI Emoji" if platform.system() == "Windows" else "Segoe UI"
+
 
 # ── Registry — add every automation here ─────────────────────────────────────
 # Format: (icon, name, category)
@@ -17,9 +21,7 @@ AUTOMATION_REGISTRY: list[tuple[str, str, str]] = [
     ("🖥",  "System Flush",   "System Tools"),
     ("🚀", "Startup Manager", "System Tools"),
     ("💾", "Disk Analyser",   "System Tools"),
-    ("🌐", "Network Checker", "Network"),
-    ("🔍", "Duplicate Finder", "File Tools"),
-    ("🌍", "Web Scraper", "Network"),
+    ("🧹", "DNS Cleaner", "Network"),
 ]
 
 CATEGORY_ICONS = {
